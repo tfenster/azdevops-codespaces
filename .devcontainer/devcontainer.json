@@ -1,0 +1,17 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
+{
+	"name": "C# (.NET)",
+	"image": "mcr.microsoft.com/devcontainers/dotnet:0-6.0",
+	"features": {
+        "ghcr.io/microsoft/codespace-features/external-repository:latest": {
+            "cloneUrl": "https://dev.azure.com/demo-codespaces/al-demo/_git/al-demo-app",
+            //"cloneSecret": "ADO_PAT",
+            "folder": "/workspaces/al-demo-app"
+        }
+    },
+    "workspaceFolder": "/workspaces/al-demo-app",
+    "initializeCommand": "mkdir -p ${localWorkspaceFolder}/../al-demo-app",
+    "onCreateCommand": "external-git clone",
+    "postStartCommand": "external-git config"     
+}
