@@ -10,8 +10,18 @@
             "folder": "/workspaces/al-demo-app"
         }
     },
+    "customizations": {
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"ms-dynamics-smb.al",
+                "StefanMaron.allanguagelinuxpatcher"
+			]
+		}
+	},
     "workspaceFolder": "/workspaces/al-demo-app",
     "initializeCommand": "mkdir -p ${localWorkspaceFolder}/../al-demo-app",
     "onCreateCommand": "external-git clone",
+    "postCreateCommand": "sudo ln -s /usr/bin/dotnet /bin/dotnet",
     "postStartCommand": "external-git config"     
 }
