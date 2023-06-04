@@ -4,7 +4,7 @@
     "features": {
         "ghcr.io/microsoft/codespace-features/external-repository:latest": {
             "cloneUrl": "https://dev.azure.com/demo-codespaces/al-demo/_git/al-demo-app",
-            "cloneSecret": "7wvplgjm64xz5x22jukp5y6lipilcprsbpzzvohik5epp4i3pxha",
+            "cloneSecret": "ADO_PAT",
             "folder": "/workspaces/al-demo-app"
         }
     },
