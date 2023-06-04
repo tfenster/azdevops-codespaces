@@ -1,9 +1,7 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
 {
-	"name": "C# (.NET)",
-	"image": "mcr.microsoft.com/devcontainers/dotnet:0-6.0",
-	"features": {
+    "name": "C# (.NET)",
+    "image": "mcr.microsoft.com/devcontainers/dotnet:0-6.0",
+    "features": {
         "ghcr.io/microsoft/codespace-features/external-repository:latest": {
             "cloneUrl": "https://dev.azure.com/demo-codespaces/al-demo/_git/al-demo-app",
             "cloneSecret": "7wvplgjm64xz5x22jukp5y6lipilcprsbpzzvohik5epp4i3pxha",
@@ -12,16 +10,17 @@
     },
     "customizations": {
 		"vscode": {
-			"settings": {},
+			"settings": {
+				"allanguagelinuxpatcher.dotnet-path": "/usr/bin/dotnet"
+			},
 			"extensions": [
 				"ms-dynamics-smb.al",
-                "StefanMaron.allanguagelinuxpatcher"
+                                "StefanMaron.allanguagelinuxpatcher"
 			]
 		}
 	},
     "workspaceFolder": "/workspaces/al-demo-app",
     "initializeCommand": "mkdir -p ${localWorkspaceFolder}/../al-demo-app",
     "onCreateCommand": "external-git clone",
-    "postCreateCommand": "sudo ln -s /usr/bin/dotnet /bin/dotnet",
     "postStartCommand": "external-git config"     
 }
